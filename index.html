@@ -1,1 +1,596 @@
-hi, this is my web page :)
+<html><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Mohammad Hassany</title>
+
+  <style type="text/css">
+    body {
+      /* background: #f0f0f0; */
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial;
+      line-height: 1.5em;
+      font-size: 14px;
+      color: #222;
+    }
+
+    .resume {
+      background: #fff;
+      width: 900px;
+      height: auto;
+      margin: 5rem auto;
+      /* set this when print into pdf */
+      /* padding: .5in .75in .75in; */
+      overflow: hidden;
+      display: table;
+    }
+
+    .my-name {
+      font-size: 250%;
+      padding: 1rem 0;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .details a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .details>* {
+      display: block;
+      text-align: center;
+    }
+
+    .details .emails>*,
+    .details .links>* {
+      display: inline-block;
+    }
+
+    .details .addresses {
+      display: none;
+    }
+
+    .summary {
+      text-align: center;
+      font-size: 1rem;
+      margin: 1rem 5rem;
+    }
+
+    .general-info {
+      /* margin-bottom: -1em; */
+    }
+
+    .section>.header {
+      font-size: 180%;
+      padding: 0.5em 0 0.25em;
+      border-bottom: solid 1px lightgray;
+      margin-bottom: .25em;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    .item>.header {
+      display: flex;
+    }
+
+    .item .position {
+      flex-grow: 1;
+      text-align: left;
+    }
+
+    .item .from-till {
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    .item:not(:last-child) {
+      margin-bottom: .5em;
+    }
+
+    .item>.header .organization,
+    .item>.header .from-till {
+      font-size: 130%;
+    }
+
+    .item>.header .organization {
+      font-weight: bold;
+    }
+
+    .item>.header .department {
+      font-size: 110%;
+    }
+
+    .item>.header .title {
+      font-weight: bold;
+    }
+
+    .item>.header .location {
+      font-size: 65%;
+    }
+
+    .bulletpoint::before {
+      content: " - ";
+      padding-left: 10px;
+    }
+
+    .flex-bulletpoint {
+      display: flex;
+    }
+
+    .flex-bulletpoint-body {
+      flex-grow: 1;
+    }
+
+    .flex-bulletpoint::before {
+      padding-right: 10px;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .a-link {
+      font-style: italic;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="lang-en">
+  <div class="resume">
+    <div class="general-info">
+      <div class="my-name">Mohammad Hassany</div>
+      <div class="details">
+        <div class="emails">
+          <div class="email" style="margin: -5px 0 5px; display: flex; align-items: center; justify-content: center;">
+            <img src="https://www.brand.pitt.edu/sites/default/files/script_pitt_blue_with_gold_outline_0.jpg" height="12">
+            <span style="margin-left: 5px; font-weight: bold;">moh70</span>
+          </div>
+        </div>
+
+        <div class="links">
+          <div class="linkedin">
+            <a href="https://www.linkedin.com/in/jone30rw">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQnPjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMCIgdmlld0JveD0iMCAwIDMyIDMyIiB3aWR0aD0iMzJweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGc+PGNpcmNsZSBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGN4PSIxNiIgY3k9IjE2IiBmaWxsPSIjMDA3QkI1IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHI9IjE2Ii8+PGc+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSIxNCIgd2lkdGg9IjQiIHg9IjciIHk9IjExIi8+PHBhdGggZD0iTTIwLjQ5OSwxMWMtMi43OTEsMC0zLjI3MSwxLjAxOC0zLjQ5OSwydi0yaC00djE0aDR2LThjMC0xLjI5NywwLjcwMy0yLDItMmMxLjI2NiwwLDIsMC42ODgsMiwydjhoNHYtNyAgICBDMjUsMTQsMjQuNDc5LDExLDIwLjQ5OSwxMXoiIGZpbGw9IiNGRkZGRkYiLz48Y2lyY2xlIGN4PSI5IiBjeT0iOCIgZmlsbD0iI0ZGRkZGRiIgcj0iMiIvPjwvZz48L2c+PGcvPjxnLz48Zy8+PGcvPjxnLz48Zy8+PC9zdmc+" width="16" height="16" style="vertical-align: middle;">
+
+              jone30rw,&nbsp;
+            </a>
+          </div>
+          <div class="github">
+            <a href="https://github.com/jone30rw">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTI5Ni4xMzMsMzU0LjE3NGM0OS44ODUtNS44OTEsMTAyLjk0Mi0yNC4wMjksMTAyLjk0Mi0xMTAuMTkyICAgYzAtMjQuNDktOC42MjQtNDQuNDQ4LTIyLjY3LTU5Ljg2OWMyLjI2Ni01Ljg5LDkuNTE1LTI4LjExNC0yLjczNC01OC45NDdjMCwwLTE4LjEzOS01Ljg5OC02MC43NTksMjIuNjY5ICAgYy0xOC4xMzktNC45ODMtMzguMDktOC4xNjMtNTYuNjgyLTguMTYzYy0xOS4wNTMsMC0zOS4wMTEsMy4xOC01Ni42OTcsOC4xNjNjLTQzLjA4Mi0yOC41NjctNjEuMjItMjIuNjY5LTYxLjIyLTIyLjY2OSAgIGMtMTIuMjQxLDMwLjgzMy00Ljk4Myw1My4wNTctMi43MTgsNTguOTQ3Yy0xNC4wNjEsMTUuNDItMjIuNjc3LDM1LjM3OS0yMi42NzcsNTkuODY5YzAsODYuMTYzLDUzLjA1NywxMDQuMzAxLDEwMi45NDIsMTEwLjE5MiAgIGMtNi4zNDQsNS40NTItMTIuMjQxLDE1Ljg3My0xNC41MDcsMzAuMzg3Yy0xMi43MDIsNS40MzgtNDUuODA4LDE1Ljg3My02NS43NTgtMTguNTkyYzAsMC0xMS43OTUtMjEuMzEtMzQuMDEyLTIyLjY2OSAgIGMwLDAtMjIuMjI0LTAuNDUzLTEuODEzLDEzLjU5MmMwLDAsMTQuOTYsNi44MTIsMjQuOTQzLDMyLjY1M2MwLDAsMTMuNiw0My4wODksNzYuMTc5LDI5LjQ4djM4LjU0MyAgIGMwLDUuOTA2LTQuNTMsMTIuNzAyLTE1Ljg2NSwxMC44OUM5Ni4xMzksNDM4Ljk3NywzMi4yLDM1NC42MjYsMzIuMiwyNTUuNzdjMC0xMjMuODA3LDEwMC4yMTYtMjI0LjAyMiwyMjQuMDMtMjI0LjAyMiAgIGMxMjMuMzQ3LDAsMjI0LjAyMywxMDAuMjE2LDIyMy41NywyMjQuMDIyYzAsOTguODU2LTYzLjk0NiwxODIuNzU0LTE1Mi44MjgsMjEyLjY4OGMtMTEuMzQyLDIuMjY2LTE1Ljg3My00LjUzLTE1Ljg3My0xMC44OSAgIFYzOTUuNDVDMzExLjEsMzc0LjU3NywzMDQuMjg4LDM2MC45ODUsMjk2LjEzMywzNTQuMTc0TDI5Ni4xMzMsMzU0LjE3NHogTTUxMiwyNTYuMjNDNTEyLDExNC43MywzOTcuMjYzLDAsMjU2LjIzLDAgICBDMTE0LjczLDAsMCwxMTQuNzMsMCwyNTYuMjNDMCwzOTcuMjYzLDExNC43Myw1MTIsMjU2LjIzLDUxMkMzOTcuMjYzLDUxMiw1MTIsMzk3LjI2Myw1MTIsMjU2LjIzTDUxMiwyNTYuMjN6IiBmaWxsPSIjMEQyNjM2IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L2c+PC9zdmc+" width="16" height="16" style="vertical-align: middle;">
+
+              jone30rw,&nbsp;
+            </a>
+          </div>
+          <div class="stackoverflow">
+            <a href="https://stackoverflow.com/users/1575725/mohammad-hassany">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNMjYwLjcsNTA2Yy01MS44LDAtMTAzLjYsMC0xNTUuNSwwYy03LDAtNywwLTctNy4yYzAtNjMuNywwLTEyNy4zLDAtMTkxYzAtNi44LDAtNi44LDYuOS02LjggICBjNy4yLDAsMTQuMywwLjMsMjEuNS0wLjFjNC40LTAuMiw1LjYsMSw1LjYsNS41Yy0wLjIsNDYuMi0wLjEsOTIuMy0wLjEsMTM4LjVjMCw3LjMsMC4yLDE0LjctMC4xLDIyYy0wLjIsNC4yLDEuMiw1LjMsNS40LDUuMyAgIGM1NS44LTAuMSwxMTEuNi0wLjEsMTY3LjUtMC4xYzI2LDAsNTItMC4xLDc4LDAuMWM0LjksMCw2LjUtMSw2LjQtNi4zYy0wLjItNTMtMC4xLTEwNi0wLjItMTU5YzAtNC44LDEuMi02LjMsNi4xLTYuMSAgIGM3LjUsMC40LDE1LDAuNCwyMi41LDBjNC42LTAuMiw1LjUsMS40LDUuNSw1LjZjLTAuMSw0OS44LTAuMSw5OS42LTAuMSwxNDkuNWMwLDE0LjMsMCwyOC43LDAsNDNjMCw2LjksMCw2LjktNi44LDYuOSAgIEMzNjQuMyw1MDYsMzEyLjUsNTA2LDI2MC43LDUwNnoiIGZpbGw9IiNCQ0JCQkIiLz48cGF0aCBkPSJNNDUyLDkuMmMzLjUtMC44LDMuMiwxLjcsMy42LDMuNmMzLjEsMTgsNi4yLDM2LjEsOS40LDU0LjFjNy41LDQzLjMsMTUsODYuNiwyMi43LDEyOS44ICAgYzAuOCw0LjMtMC40LDUuNS00LjIsNi4xYy0xMC41LDEuNi0yMS4xLDMuMi0zMS41LDUuNGMtNC41LDEtNS4yLTAuNy01LjgtNC40Yy0zLjgtMjIuOC03LjgtNDUuNi0xMS44LTY4LjQgICBjLTYuNS0zNy4yLTEyLjktNzQuNC0xOS40LTExMS43Yy0xLjQtNy44LTEuNS03LjgsNi40LTkuM0M0MzEuNiwxMi42LDQ0MS45LDExLDQ1Miw5LjJ6IiBmaWxsPSIjRjM4MTI2Ii8+PHBhdGggZD0iTTQzOSwyMTAuOWMtMC4xLDEuNi0xLjQsMi0yLjMsMi42Yy05LjYsNi42LTE5LjMsMTMtMjguOCwxOS44Yy0zLjUsMi41LTQuMi0wLjEtNS42LTIgICBjLTI2LTM4LjEtNTItNzYuMi03OC0xMTQuNGMtOS4xLTEzLjMtMTguMS0yNi43LTI3LjQtNDBjLTEuOS0yLjctMi4yLTQuMSwxLTYuMmM5LjQtNi4xLDE4LjUtMTIuNCwyNy43LTE4LjggICBjMi40LTEuNywzLjgtMi4xLDUuOSwwLjljMzUuMiw1MS44LDcwLjUsMTAzLjUsMTA1LjgsMTU1LjNDNDM3LjksMjA5LDQzOC41LDIxMCw0MzksMjEwLjl6IiBmaWxsPSIjRjM4MTI2Ii8+PHBhdGggZD0iTTM2MCwzNTEuMWMtMC45LDkuMy0xLjksMTkuNi0yLjcsMjkuOWMtMC4yLDMuMi0xLjMsNC4yLTQuNiwzLjljLTQwLjEtMy44LTgwLjItNy40LTEyMC4zLTExLjEgICBjLTIxLjctMi00My40LTQuMS02NS4xLTUuOWMtNC4zLTAuNC01LjktMS43LTUuMy02LjRjMS40LTEwLjcsMi4zLTIxLjUsMy4xLTMyLjNjMC4yLTMuMiwxLjMtMy42LDQuMy0zLjQgICBjNDUuNiw0LjIsOTEuMSw4LjMsMTM2LjcsMTIuNGMxNS45LDEuNCwzMS44LDMsNDcuNyw0LjZDMzYwLjQsMzQzLjQsMzYwLjQsMzQzLjUsMzYwLDM1MS4xeiIgZmlsbD0iI0YzODEyNiIvPjxwYXRoIGQ9Ik0zOTcuNywyNDEuN2MtMC41LDAuOC0wLjksMS43LTEuNCwyLjVjLTUuNyw5LjYtMTEuNCwxOS4yLTE2LjksMjguOWMtMS43LDMtMy4xLDMuNS02LjIsMS43ICAgYy01My45LTMxLjktMTA3LjgtNjMuNy0xNjEuNy05NS40Yy0zLTEuOC0yLjktMy4xLTEuMy01LjdjNS44LTkuNSwxMS41LTE5LjEsMTctMjguOGMxLjYtMi44LDIuOC0zLjMsNS44LTEuNiAgIGM1NCwzMiwxMDguMSw2My44LDE2Mi4xLDk1LjdDMzk2LjEsMjM5LjYsMzk3LjcsMjM5LjksMzk3LjcsMjQxLjd6IiBmaWxsPSIjRjM4MTI2Ii8+PHBhdGggZD0iTTE4Ni4zLDIzOC40YzE0LjUsMy45LDI4LjgsNy44LDQzLjEsMTEuNmM0Ni40LDEyLjUsOTIuOCwyNSwxMzkuMiwzNy4zYzQuMSwxLjEsNC45LDIuNSwzLjcsNi41ICAgYy0zLjEsMTAuNC01LjgsMjAuOC04LjUsMzEuM2MtMC43LDIuOS0xLjUsNC4xLTUsMy4xYy02MC4zLTE2LjQtMTIwLjctMzIuNi0xODEtNDguN2MtMy42LTEtNC40LTIuMS0zLjMtNS44ICAgYzMuMS0xMC43LDUuOC0yMS41LDguNy0zMi4zQzE4My42LDIzOS44LDE4My43LDIzNy41LDE4Ni4zLDIzOC40eiIgZmlsbD0iI0YzODEyNiIvPjxwYXRoIGQ9Ik0yNTcuNSw0MzljLTMwLjgsMC02MS42LTAuMS05Mi40LDAuMWMtNC4yLDAtNS4zLTEuMi01LjItNS4zYzAuMy0xMC44LDAuMi0yMS43LDAtMzIuNSAgIGMtMC4xLTMuMywxLTQuMiw0LjMtNC4yYzYyLjUsMC4xLDEyNC45LDAsMTg3LjQtMC4xYzMuNiwwLDQuNSwxLjIsNC40LDQuNmMtMC4yLDEwLjgtMC4yLDIxLjcsMCwzMi41YzAuMSw0LTEuMiw1LTUsNSAgIEMzMTkuOCw0MzguOSwyODguNiw0MzguOSwyNTcuNSw0MzlDMjU3LjUsNDM5LDI1Ny41LDQzOSwyNTcuNSw0Mzl6IiBmaWxsPSIjRjM4MTI2Ii8+PC9nPjwvc3ZnPg==" width="16" height="16" style="vertical-align: middle;">
+
+              mohammad-hassany
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="summary">
+        Enthusiastic individual with academic and professional experience, interested in Educational Systems
+      </div>
+    </div>
+
+    <!-- education -->
+    <div class="section">
+      <div class="header">
+        Education
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">
+                University of Pittsburgh
+              </div>
+              <div class="department inline-block">
+                / School of Computing &amp; Information
+              </div>
+              <div class="title">
+                PhD in Information Science
+              </div>
+            </div>
+            <div class="from-till">May 2022 — Present<br>
+              <div class="location">Pittsburgh, PA, USA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">
+                Stevens Institute of Technology
+              </div>
+              <div class="department inline-block">
+                / School of Systems &amp; Enterprises
+              </div>
+              <div class="title">
+                MS in Software Engineering [GPA: 4/4] -
+                <a href="https://en.wikipedia.org/wiki/Fulbright_Program" class="a-link">
+                  Fulbright Scholar
+                </a>
+              </div>
+            </div>
+            <div class="from-till">Aug 2018 — May 2020<br>
+              <div class="location">Hoboken, NJ, USA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">Herat University</div>
+              <div class="department inline-block">/ Faculty of Computer Science
+              </div>
+              <div class="title">BS in Computer Science [GPA: 89/100]</div>
+
+            </div>
+            <div class="from-till">Mar 2009 — Dec 2012<br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- teaching exprience -->
+    <div class="section">
+      <div class="header">
+        Teaching experience
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">Khatam-al-Nabieen University</div>
+              <div class="department inline-block"></div>
+              <a href="https://knu.edu.af/" class="a-link">knu.edu.af</a>
+              <div class="title">
+                <span>Part-Time Instructor </span>
+                <span style="font-weight: normal; width: 500px; display: inline-block; vertical-align: top;">
+                  (Taught Software Engineering Fundamentals)
+                </span>
+              </div>
+            </div>
+            <div class="from-till">Sep 2016 — Feb 2017<br>
+              <div class="location">Kabul, AFG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">Ghalib University</div>
+              <div class="department inline-block"></div>
+              <a href="https://ghalib.edu.af/" class="a-link">ghalib.edu.af</a>
+              <div class="title">
+                <span>Part-Time Instructor</span>
+                <span style="font-weight: normal; width: 500px; display: inline-block; vertical-align: top;">
+                  (Taught Java Swing, Java Network Prog, Software Eng. Fundamentals)
+                </span>
+              </div>
+            </div>
+            <div class="from-till">
+              Jul 2013 — Jan 2016
+              <br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">Herat University</div>
+              <div class="department inline-block">/ Faculty of Computer Science
+              </div>
+              <a href="https://hu.edu.af/" class="a-link">hu.edu.af</a>
+              <div class="title">
+                <span>Part-Time Instructor</span>
+                <span style="font-weight: normal; width: 500px; display: inline-block; vertical-align: top;">
+                  (Volunteer - Taught Intro to C/C++, Java Prog. Fundamentals, OOP using Java, Java Swing)
+                </span>
+              </div>
+            </div>
+            <div class="from-till">
+              Sep 2014 — Dec 2015
+              <br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">Khaje Abdullah Ansari Institute of Higher Education</div>
+              <div class="department inline-block"></div>
+              <a href="http://ansari.edu.af/" class="a-link">ansari.edu.af</a>
+              <div class="title">
+                <span>Part-Time Instructor</span>
+                <span style="font-weight: normal; width: 500px; display: inline-block; vertical-align: top;">
+                  (Taught Java Prog. Fundamentals, OOP using Java, Data Structure &amp; Algorithm,
+                  Database Fundamentals, Cross-Platform Development using PhoneGap)
+                </span>
+              </div>
+            </div>
+            <div class="from-till">
+              Sep 2013 — Jan 2016
+              <br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">Herat University</div>
+              <div class="department inline-block">/ Faculty of Computer Science</div>
+              <a href="https://hu.edu.af/" class="a-link">hu.edu.af</a>
+              <div class="title">
+                <span>Tutor</span>
+                <span style="font-weight: normal; width: 670px; display: inline-block; vertical-align: top;">
+                  (Volunteer - Conducted Java Prog. Fundamentals, Data Structure &amp; Algorithm,
+                  Software Eng. Fundamentals, and Coding sessions)
+                </span>
+              </div>
+            </div>
+            <div class="from-till">
+              Apr 2010 — Dec 2012
+              <br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- work experience -->
+    <div class="section">
+      <div class="header">
+        Work experience
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization">Freelance</div>
+              <div class="department"></div>
+              <div class="title">Software Engineer / Developer - Database Designer</div>
+            </div>
+            <div class="from-till"></div>
+          </div>
+          <div class="content">
+            <div class="bulletpoint flex-bulletpoint">
+              <b>Nili ERP</b>
+              <span class="flex-bulletpoint-body">
+                , a self-employeed project
+                <i>
+                  <!-- OSGi,  -->
+                  (Apache Felix, Hibernate, Jersey,
+                  <!-- Logback, JUnit,  -->
+                  BndTools, Angular)
+                  <!-- PrimeNG, Font-Awesome, Nrwl Tools, Jython, ProGuard, Laravel, H2, MySql, Git -->
+                </i>
+              </span>
+              <span>Sept 2019 - Present</span>
+            </div>
+            <div class="bulletpoint flex-bulletpoint">
+              <b>KiteRunner/Kern AG</b>
+              <span class="flex-bulletpoint-body">
+                , migrating their legacy Java desktop app to an online web app
+                <i>
+                  (Vue, ExpressJS, AWS-Cognito)
+                </i>
+              </span>
+              <span>Jul 2021 - Present</span>
+            </div>
+            <div class="bulletpoint flex-bulletpoint">
+              <b>SuperHero LLC</b>
+              <span class="flex-bulletpoint-body">
+                , Taekwondo Training mobile app development
+                <i>
+                  (Ionic, Laravel)
+                </i>
+              </span>
+              <span>Aug 2020 - Jul 2021</span>
+            </div>
+            <div class="bulletpoint flex-bulletpoint">
+              <b>USWDP-FHI360</b>
+              <span class="flex-bulletpoint-body">
+                , MoHE PHEI debugging, and maintenance
+                <i>(Angular, Laravel)</i>
+              </span>
+              <span>Mar 2018 - Apr 2018</span>
+            </div>
+            <div class="bulletpoint flex-bulletpoint">
+              <b>Glory LLC</b>
+              <span class="flex-bulletpoint-body">
+                , Ministry of Higher Education
+                (MoHE) MIS's Private Higher Education Institute (PHEI) web module development
+              </span>
+              <span>Sept 2017</span>
+            </div>
+            <div class="bulletpoint flex-bulletpoint">
+              <b>Microcis Software Solutions LTD</b>
+              <span class="flex-bulletpoint-body">
+                , Microcis Panda debugging and feature addition
+                <i>(Java Swing, MySql, H2)</i>
+              </span>
+              <span>2014 - 2017</span>
+            </div>
+            <div class="bulletpoint flex-bulletpoint">
+              <b>Safezone &amp; Radyab Hoshmand Car Tracking Co.</b>
+              <span class="flex-bulletpoint-body">
+                , mobile app development and maintenance
+                <i>(Android/iOS-native, Cross-Platform Ionic)</i>
+              </span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization">Ministry of Public Works</div>
+              <div class="department"></div>
+              <div class="title">Senior MIS Specialist / Software Engineer</div>
+
+            </div>
+            <div class="from-till">Oct 2016 — Jun 2018<br>
+              <div class="location">Kabul, AFG</div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="bulletpoint">Led ministry's MIS system design, development, and
+              maintenance
+              <small style="font-style: italic; display: none;">
+                to provide ministry' projects information access to the public to promote open
+                government policy
+              </small>
+              <i>
+                (Laravel, MySql, JQuery, Angular, CentOS, Google Map JavaScript)
+              </i>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization">Khlaq Hoshmand (was known as IGS)</div>
+              <div class="department"></div>
+              <div class="title">Software Engineer / Developer</div>
+
+            </div>
+            <div class="from-till">Jan 2016 — Oct 2016<br>
+              <div class="location">Kabul, AFG</div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="bulletpoint">
+              Contributed to design and development of Paiwand (social media app) as a key member
+              <i>
+                (CodeIgniter, Spring MVC, MySql, CometD)
+              </i>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization">Microcis Software Solutions LTD</div>
+              <div class="department"></div>
+              <div class="title">Software Engineer / Developer</div>
+            </div>
+            <div class="from-till">Dec 2011 — Mar 2014<br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="bulletpoint">
+              Led Microcis Panda's (an accounting, inventory, sales management system) design and development
+              <i>
+                (Java Swing, JDBC, MySql, H2, Ant)
+              </i>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization">Afghan Citadel Software Company (ACSC)</div>
+              <div class="department"></div>
+              <div class="title">Software Developer Intern</div>
+
+            </div>
+            <div class="from-till">Sep 2010 — Dec 2011<br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="bulletpoint">MoD's (Ministry of Defense) Pizhand project requirement
+              engineer</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">ACM/ICPC</div>
+              <div class="department inline-block">/ Kabul Region</div>
+              <div class="title">Secretary of the Executive Committee &amp; Judge</div>
+            </div>
+            <div class="from-till">May 2017 — Present<br>
+              <div class="location">Kabul, AFG</div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="">
+              "... an annual multi-tiered competitive programming competition among the universities of the world."
+              <a href="https://en.wikipedia.org/wiki/ACM_International_Collegiate_Programming_Contest" style="font-style: italic;">Wikipedia</a>
+            </div>
+            <div class="bulletpoint">Leading the committee responsible for preparing and reviewing problems-list and a
+              member of judge committee</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="header">
+            <div class="position">
+              <div class="organization inline-block">Google Inc</div>
+              <div class="department inline-block">/ Google Map</div>
+              <div class="title">
+                <span>Certified Distinguished Map Maker</span>
+                <span style="font-weight: normal; width: 500px; display: inline-block; vertical-align: top;">
+                  (Volunteer)
+                </span>
+              </div>
+            </div>
+            <div class="from-till">2010<br>
+              <div class="location">Herat, AFG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- technical skills -->
+    <div class="section">
+      <div class="header">
+        Technical skills
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="content">
+            <b>Java</b>, Python, PHP,
+            <b>HTML/CSS/JS, Angular</b>, JQuery,
+            Spring MVC, <b>Laravel</b>,
+            JUnit,
+            <b>MySql</b>, H2,
+            Hibernate,
+            OSGi (Apache Felix),
+            <b>Git</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body></html>
